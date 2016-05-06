@@ -3,7 +3,7 @@ var fs = require('fs');
 var path = require('path');
 var mime = require('mime');
 var cache = {};
-
+var port = process.env.PORT || 8000;
 
 function send404(res) {
 	res.writeHead(404, {'Content-Type': 'text/plain'});
@@ -50,8 +50,8 @@ var server = http.createServer(function(req, res) {
 });
 
 
-server.listen(8000, function() {
-	console.log('Server listening on port 8000');
+server.listen(port, function() {
+	console.log('Server listening on port ' + port);
 });
 
 var chatServer = require('./lib/chat_server');
