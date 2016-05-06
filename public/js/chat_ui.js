@@ -48,6 +48,7 @@ $(document).ready(function() {
     $('#messages').append(newElement);
   });
 
+
   socket.on('rooms', function(rooms) {
     console.log(rooms);
     $('#room-list').empty();
@@ -59,8 +60,11 @@ $(document).ready(function() {
     }
 
     $('#room-list div').click(function(){
-      chatApp.processCommand('/join ' + $(this).text());
-      $('#send-message').click();
+      var currentRoom = $('#room').text();
+      if( $(this).text() != currentRoom ){
+        chatApp.processCommand('/join ' + $(this).text());
+        $('#send-message').focus();
+      }
     });
   });
 
