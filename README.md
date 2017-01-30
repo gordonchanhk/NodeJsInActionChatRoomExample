@@ -11,7 +11,7 @@ Reason for the example no longer work with newer Socket.io because of 1.x Socket
 I also get the code to work with [Heroku](https://heroku.com) and here is the [Demo](gcnodejschat.herokuapp.com)
 
 ### Step for you to run it local
-1. `git clont https://github.com/gordonchanhk/NodeJsInActionChatRoomExample`
+1. `git clone https://github.com/gordonchanhk/NodeJsInActionChatRoomExample`
 1. `npm install` to run the dependency
 1. `node server.js` to launch the NodeJS Application
 1. Open browser and go to `http://localhost:8000` as I defult the port as 8000
